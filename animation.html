@@ -5,8 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
+    <style>
+        @keyframes sliding{
+    /* from*/ 0%{
+                background-color: limegreen;
+                left: 0;
+                top:0;
+            }
+
+             50%{
+                top:200px;
+             }
+            /* to*/ 100%{
+                background-color:magenta;
+                left: 400px;
+                top:0;
+            }
+        }
+        .stage{
+            width: 500px;
+            height: 300px;
+            background-color: lightcyan;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: limegreen;
+            position: relative;
+            border-radius: 50%;
+            animation:sliding 1s ease-in-out 0.5s infinite alternate ;
+            animation-play-state: running;
+        }
+    </style>
 </head>
 <body>
     <h2>Lets explore animation</h2>
+    <div class="stage">
+        <div class="box">
+
+
+        </div>
+
+    </div>
 </body>
 </html>
